@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 
 import VisuallyHidden from '../VisuallyHidden';
+import { QUERIES } from '../../constants';
 
 const Footer = () => {
   return (
@@ -170,6 +171,16 @@ const MainNavArea = styled.div`
   gap: 32px;
   padding: 32px 0 48px;
   text-align: center;
+
+  @media ${QUERIES.tabletAndUp} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+  
+  @media ${QUERIES.laptopAndUp} {
+    justify-content: center;
+  }
 `;
 
 const MainNavHeading = styled.h2`
